@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Aviruchi Caterers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#F8F5EE;--ivory2:#F0EBDF;--ink:#1B1612;--mute:#6E655B;--card:#FFFFFF;--line:#E2DACB;--gold:#C9A05A;--gold2:#E4C27E;--char:#17120E;--char2:#211A14;--lt:#F4EFE4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ivory:#14100C;--ivory2:#1B1510;--ink:#F1ECE1;--mute:#A89E90;--card:#211A14;--line:#34291F}}
+:root[data-theme="dark"]{--ivory:#14100C;--ivory2:#1B1510;--ink:#F1ECE1;--mute:#A89E90;--card:#211A14;--line:#34291F}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--ivory);color:var(--ink);font:300 17px/1.7 Jost,system-ui,sans-serif}
+h1,h2,h3,.fb,nav b{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.08;margin:0}
+a{color:inherit}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.top{position:sticky;top:0;z-index:20;background:rgba(23,18,14,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--lt);padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid rgba(201,160,90,.25)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+nav b{font-size:1.5rem}nav a{text-decoration:none;margin-left:26px;font-size:.96rem;opacity:.85}nav a:hover{opacity:1;color:var(--gold2)}
+.navcta{background:var(--gold);color:#17120E;padding:9px 22px;border-radius:999px;opacity:1!important}
+.hero{background:radial-gradient(circle at 78% 30%,rgba(228,194,126,.32) 0,transparent 22%),radial-gradient(circle at 92% 62%,rgba(228,194,126,.2) 0,transparent 18%),radial-gradient(circle at 62% 78%,rgba(201,160,90,.18) 0,transparent 16%),radial-gradient(circle at 88% 12%,rgba(255,220,150,.18) 0,transparent 14%),linear-gradient(110deg,#0F0B08 35%,#2A1D12);color:var(--lt);padding:112px 0 120px}
+.eye{color:var(--gold2);font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:clamp(3.3rem,11vw,6.4rem);font-weight:500;max-width:11ch}
+.hero h1 em{color:var(--gold2);display:block;font-size:.62em;margin-top:6px}
+.hero p{max-width:36ch;font-size:1.12rem;color:rgba(244,239,228,.8);margin:26px 0 36px}
+.btn{display:inline-block;padding:14px 32px;border-radius:999px;font-weight:400;text-decoration:none;border:1px solid var(--gold);margin:0 12px 12px 0;transition:background .25s,color .25s}
+.btn.main{background:var(--gold);color:#17120E}.btn.main:hover{background:transparent;color:var(--gold2)}
+.btn.ghost{color:var(--lt)}.btn.ghost:hover{background:var(--lt);color:#17120E}
+section{padding:96px 0}
+h2{font-size:clamp(2.2rem,6vw,3.2rem);font-weight:500;margin-bottom:12px}
+h2::after{content:"";display:block;width:48px;height:2px;background:var(--gold);margin-top:14px}
+.sub{max-width:46ch;margin:0 0 48px;color:var(--mute)}
+.svwrap{display:grid;gap:36px;grid-template-columns:1.25fr 1fr;align-items:stretch}
+.svs{display:grid;gap:0;grid-template-columns:repeat(2,1fr)}
+.sv{padding:8px 24px 24px 0;margin-bottom:12px}.sv:nth-child(even){padding-left:24px;border-left:1px solid var(--line)}
+.sv svg{width:44px;height:44px;color:var(--gold);margin-bottom:10px}
+.sv h3{font-size:1.5rem}.sv p{margin:4px 0 0;color:var(--mute);font-size:.96rem}
+.feature{background:var(--char);color:var(--lt);padding:36px;border-radius:6px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.feature::before{content:"";position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;border:1px solid var(--gold);opacity:.4}
+.feature small{color:var(--gold2);letter-spacing:.16em;text-transform:uppercase;font-size:.78rem}
+.feature h3{font-size:2.3rem;margin:10px 0 12px}.feature h3 em{color:var(--gold2)}
+.feature p{margin:0;color:rgba(244,239,228,.78)}
+#menu{background:var(--ivory2)}
+.mb{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:36px}
+.mb-row{display:flex;flex-wrap:wrap;gap:20px;align-items:end}.mb-row .grow{flex:1 1 220px}
+.mlist h3{font-size:1.45rem;margin:32px 0 4px;color:var(--gold);font-style:italic}
+.mlist ul{margin:0;padding:0;list-style:none}
+.mlist li{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.mlist li button{background:none;color:var(--mute);padding:2px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;font-size:.9rem}
+.empty{color:var(--mute);margin:28px 0 0}
+.dg{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.dish{text-align:left}
+.art{background:radial-gradient(circle at 50% 40%,#3A2A1B,#17120E);border-radius:8px;padding:22px 26px;margin-bottom:14px}
+.art svg{display:block;width:100%;height:auto;max-height:130px}
+.dish h3{font-size:1.5rem}.dish p{margin:2px 0 8px;color:var(--mute);font-size:.95rem}.dish i{display:block;width:28px;height:2px;background:var(--gold)}
+.dark{background:var(--char);color:var(--lt);position:relative;overflow:hidden}
+.dark h2{color:var(--lt)}.dark .sub{color:rgba(244,239,228,.72)}
+.cg{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.chef{background:var(--char2);border:1px solid rgba(201,160,90,.4);border-radius:8px;padding:28px;text-align:center}
+.chef svg{width:90px;height:auto;margin-bottom:8px}.chef h3{color:var(--gold2);font-size:1.6rem}.chef p{margin:6px 0 0;color:rgba(244,239,228,.78);font-size:.96rem}
+.why{display:grid;gap:36px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.why div{border-top:2px solid var(--gold);padding-top:16px}.why h3{font-size:1.5rem}.why p{margin:4px 0 0;color:var(--mute)}
+ol.steps{padding:0;margin:0;list-style:none;counter-reset:s;display:grid;gap:36px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+ol.steps li{counter-increment:s;padding-top:14px;border-top:1px solid var(--line);color:var(--mute)}ol.steps li b{color:var(--ink);font-weight:500}
+ol.steps li::before{content:counter(s);display:block;font:italic 500 2.6rem 'Cormorant Garamond',serif;color:var(--gold);line-height:1;margin-bottom:8px}
+#contact{background:var(--ivory2)}
+label{display:grid;gap:6px;font-size:.95rem;color:var(--mute)}
+input,select,textarea{font:inherit;font-weight:300;font-size:1rem;padding:11px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:0;border-bottom-color:var(--gold)}select option{background:var(--card);color:var(--ink)}
+form{display:grid;gap:26px;max-width:560px}
+button{font:inherit;cursor:pointer;background:var(--char);color:var(--lt);border:1px solid var(--char);border-radius:999px;padding:14px 32px;transition:background .25s,color .25s}
+button:hover{background:transparent;color:var(--ink)}
+.sent{max-width:560px;margin-top:32px;border:1px solid var(--line);border-left:3px solid var(--gold);background:var(--card);padding:24px;border-radius:6px}
+.sent .btn.main{background:var(--char);color:var(--lt);border-color:var(--char)}.sent .cp{background:none;color:var(--ink);border-color:var(--line);margin-bottom:12px}
+.sent pre{white-space:pre-wrap;word-break:break-word;font:inherit;font-size:.93rem;color:var(--mute);background:var(--ivory2);padding:14px;margin:10px 0 0}
+footer{background:#0F0B08;color:rgba(244,239,228,.75);padding:64px 0;font-size:.97rem}
+.fgrid{display:grid;gap:34px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.fb{font-size:1.9rem;color:var(--lt)}footer a{color:var(--gold2)}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--gold);color:#17120E;text-decoration:none;padding:12px 22px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+@media (max-width:760px){.svwrap{grid-template-columns:1fr}.top nav a:not(.navcta){display:none}.hero{padding:76px 0 84px}section{padding:70px 0}.mb{padding:24px 18px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style></head>
+<body>
+<header class="top"><div class="wrap"><nav><b>Aviruchi Caterers</b><div><a href="#menu">Menu</a><a href="#contact" class="navcta">Get a quote</a></div></nav></div></header>
+<section class="hero"><div class="wrap"><div class="eye">Freshly cooked catering</div><h1>Aviruchi Caterers<em>food worth celebrating</em></h1><p>Weddings, family functions and company events, cooked fresh and served with care.</p><a class="btn main" href="#menu">Build your menu</a><a class="btn ghost" href="#contact">Get a quote</a></div></section>
+<main>
+<section><div class="wrap"><h2>Events we cater</h2><p class="sub">Small gatherings to large celebrations, each with a menu made for you.</p>
+<div class="svwrap"><div class="svs"><div class="sv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 34h36M10 34a14 14 0 0 1 28 0M24 16v4M22 14h4"/></svg><h3>Weddings</h3><p>Full menus for your big day</p></div><div class="sv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 10h12l-2 10a4 4 0 0 1-8 0zM20 24v14M15 38h10M30 14h10l-2 8a3 3 0 0 1-6 0z"/></svg><h3>Parties</h3><p>Birthdays and family functions</p></div><div class="sv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="16" width="32" height="22" rx="3"/><path d="M18 16v-4h12v4M8 26h32"/></svg><h3>Corporate</h3><p>Lunches and meetings, on time</p></div><div class="sv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 8l4 9 10 1-7.5 6.5L33 34l-9-5-9 5 2.5-9.5L10 18l10-1z"/></svg><h3>Festivals</h3><p>Pujas and community meals</p></div></div><div class="feature"><small>Fresh ingredients</small><h3>Cooked fresh, <em>served warm</em></h3><p>Every dish is prepared on the day of your event, so your guests taste the difference.</p></div></div></div></section>
+<section id="menu"><div class="wrap"><h2>Build your menu</h2><p class="sub">Type every dish you want, choose where it goes, and add it. Your menu is sent with your quote request.</p>
+<div class="mb">
+<div class="mb-row">
+<label>Section<select id="mcat"><option>Welcome drinks</option><option>Starters</option><option>Main course</option><option>Rice and breads</option><option>Desserts</option><option>Other</option></select></label>
+<label class="grow">Dish name<input id="mdish" placeholder="For example: Paneer butter masala" autocomplete="off"></label>
+<button type="button" id="madd">Add dish</button>
+</div>
+<div id="mlist" class="mlist"><p class="empty">No dishes yet. Type a dish above and press Add dish.</p></div>
+</div>
+</div></section>
+<section><div class="wrap"><h2>Why choose Aviruchi</h2><p class="sub">Good food is only part of a good event.</p><div class="why"><div><h3>Cooked fresh</h3><p>Prepared on the day, not reheated.</p></div><div><h3>Your menu, your way</h3><p>Choose every dish. We adjust spice and portions.</p></div><div><h3>On time</h3><p>We arrive early and serve when you are ready.</p></div><div><h3>Clean and tidy</h3><p>Careful in the kitchen, tidy at the venue.</p></div></div></div></section>
+<section style="padding-top:0"><div class="wrap"><h2>How booking works</h2><p class="sub">Four steps from first message to the last plate.</p><ol class="steps"><li><b>Tell us the plan</b><br>Date, place, guest count and food preferences.</li><li><b>Get a quote</b><br>We send a menu and price for your approval.</li><li><b>Confirm</b><br>Pay an advance to reserve your date.</li><li><b>Enjoy the day</b><br>We cook, serve and clean up.</li></ol></div></section>
+<section id="contact"><div class="wrap"><h2>Ask for a quote</h2><p class="sub">Fill this in and it creates a ready-to-send WhatsApp message.</p>
+<form id="f">
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Event type<select name="event"><option>Wedding</option><option>Engagement</option><option>Housewarming</option><option>Birthday</option><option>Puja or festival</option><option>Corporate</option><option>Other</option></select></label>
+<label>Event date<input type="date" name="date"></label>
+<label>Number of guests<input type="number" name="guests" min="1" inputmode="numeric"></label>
+<label>Food type<select name="food"><option>Vegetarian</option><option>Non-vegetarian</option><option>Both</option></select></label>
+<label>Anything else<textarea name="notes" rows="3"></textarea></label>
+<button type="submit">Prepare my quote request</button>
+</form>
+<div id="sent" class="sent" hidden aria-live="polite"></div>
+</div></section>
+</main>
+<footer><div class="wrap fgrid"><div><b class="fb">Aviruchi Caterers</b><br>Freshly cooked food for every occasion.</div><div><a data-call href="tel:">Call: +91 82506 45627</a><br>Siliguri, West Bengal</div><div>© <span id="y"></span> Aviruchi Caterers<br>All rights reserved</div></div></footer>
+<a class="wa" data-wa href="#contact" aria-label="Chat on WhatsApp">Chat on WhatsApp</a>
+<script>
+// EDIT THIS: country code + number, digits only (example: 919876543210)
+var PHONE="918250645627";
+document.querySelectorAll("[data-wa]").forEach(function(a){a.href="https://wa.me/"+PHONE;a.target="_blank";});
+document.getElementById("y").textContent=new Date().getFullYear();
+document.querySelectorAll("[data-call]").forEach(function(a){a.href="tel:+"+PHONE;});
+var menu=[];
+function renderMenu(){var el=document.getElementById("mlist");
+ if(!menu.length){el.innerHTML='<p class="empty">No dishes yet. Type a dish above and press Add dish.</p>';return;}
+ var cats=[];menu.forEach(function(m){if(cats.indexOf(m.c)<0)cats.push(m.c);});
+ el.innerHTML="";
+ cats.forEach(function(c){var h=document.createElement("h3");h.textContent=c;el.appendChild(h);
+  var ul=document.createElement("ul");
+  menu.forEach(function(m,i){if(m.c!==c)return;var li=document.createElement("li");
+   var sp=document.createElement("span");sp.textContent=m.d;
+   var b=document.createElement("button");b.type="button";b.textContent="Remove";b.setAttribute("aria-label","Remove "+m.d);
+   b.onclick=function(){menu.splice(i,1);renderMenu();};
+   li.appendChild(sp);li.appendChild(b);ul.appendChild(li);});
+  el.appendChild(ul);});}
+function addDish(){var i=document.getElementById("mdish"),v=i.value.trim();if(!v)return;
+ menu.push({c:document.getElementById("mcat").value,d:v});i.value="";i.focus();renderMenu();}
+document.getElementById("madd").onclick=addDish;
+document.getElementById("mdish").addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();addDish();}});
+function menuText(){if(!menu.length)return "Not chosen yet";var out="",cats=[];
+ menu.forEach(function(m){if(cats.indexOf(m.c)<0)cats.push(m.c);});
+ cats.forEach(function(c){out+="\n"+c+": "+menu.filter(function(m){return m.c===c;}).map(function(m){return m.d;}).join(", ");});
+ return out;}
+document.getElementById("f").addEventListener("submit",function(e){
+ e.preventDefault();var d=new FormData(e.target);
+ var t="Hello Aviruchi Caterers, I'd like a quote.\nName: "+d.get("name")+"\nEvent: "+d.get("event")+"\nDate: "+(d.get("date")||"not decided")+"\nGuests: "+(d.get("guests")||"not decided")+"\nFood: "+d.get("food")+"\nMenu:"+(menu.length?"":" ")+menuText()+"\nNotes: "+(d.get("notes")||"-");
+ var url="https://wa.me/"+PHONE+"?text="+encodeURIComponent(t);
+ var box=document.getElementById("sent");
+ box.hidden=false;
+ box.innerHTML="";
+ var p1=document.createElement("p");p1.innerHTML="<b>Your quote request is ready.</b> Tap the green button to send it on WhatsApp.";
+ var go=document.createElement("a");go.className="btn main";go.textContent="Open WhatsApp";go.href=url;go.target="_blank";go.rel="noopener";
+ var cp=document.createElement("button");cp.type="button";cp.textContent="Copy message";cp.className="cp";
+ var pre=document.createElement("pre");pre.textContent=t;
+ cp.onclick=function(){try{navigator.clipboard.writeText(t).then(function(){cp.textContent="Copied";});}catch(x){var r=document.createRange();r.selectNodeContents(pre);var sl=getSelection();sl.removeAllRanges();sl.addRange(r);cp.textContent="Press copy on your phone";}};
+ box.appendChild(p1);box.appendChild(go);box.appendChild(cp);box.appendChild(pre);
+ box.scrollIntoView({behavior:"smooth",block:"center"});
+});
+</script>
+</body></html>
